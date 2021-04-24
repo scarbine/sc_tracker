@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Electrolize, sans-serif;
+    /* background-image: linear-gradient(rgb(0, 195, 255), rgb(222, 246, 253)); */
+}
+
+body{
+
+    background-color: white;
+    color: lightskyblue;
+
+}
+logo{
+
+    color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    padding-top: .25em;
+}
+
+header{
+    
+    background-color: beige;
+    color: lightskyblue;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    padding: 2em;
+    margin: 1.5em;
+    border: 5em;
+    border-color: antiquewhite;
+    border-radius: 5em; 
+
+}
+
+.nav_header{
+
+    color :black;
+    flex-grow: 4;
+    margin-top: 1em;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* text-align: center; */
+  
+    /* padding: .5em; */
+    /* margin: 2em; */
+    
+}
+
+.top_nav_button{
+
+    flex-grow: 1;
+    /* text-align: center; */
+    height: 3em;
+    width: 5em;
+}
+article {
+
+    background-image: linear-gradient(rgb(0, 195, 255), rgb(222, 246, 253));
+    color: black;
+    padding: 2em;
+    margin: 0em;
+    /* border: 5em; */
+    /* border-radius: 5em 0em 0em 5em;  */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+
+}
+
+.top_nav{
+
+    color: black;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 3em;
+    height: 2em;
+    width: 8em;
+    display: flex;
+    justify-content: right;
+    flex-grow: 1;
+    text-align: center;
+    
+} 
+
+.gki_reading{
+
+   margin: 1em;
+   padding: 1em;
+   color: black;
+   display: flex;
+   justify-content:last baseline;
+   text-align: center;
+   flex-grow: 1em;
+
+}
+
+main{
+
+    background-image: linear-gradient(to right, rgb(0, 195, 255) , rgb(222, 246, 253));
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 2em;
+    border-radius: 3em;
+
+}
+
+.food_tracker{
+
+    padding: .5em;
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;                            
+}
+.food_tracker_labels{
+
+    padding: .5em;
+    margin: .5em;
+
+}
+
+.input_food_header{
+
+    text-align: center;
+    padding: .25em;
+    /* margin-bottom: 2em; */
+}
+
+.food_option{
+
+    padding: .25em;
+    margin: .25em;
+}
+
+.food_intake_header{
+
+    text-align: center;
+    border-bottom: 1.5em;
+    padding: .25em;
+}
+
+.totals_per_day{
+    font-size: xx-large;
+}
+
+
+
+.input_form{
+
+    padding: 1.25em;
+    margin: 1.25em;
+    flex: none;
+    text-align: right;
+
+}
+
+aside{
+
+    background-color: beige;
+    color: black;
+    padding: 2em;
+    margin: 0em;
+    /* border:  5em; */
+    /* border-radius: 0em 5em 5em 0em;  */
+   
+}
+
+footer{
+
+    background-color: beige;
+    color: lightskyblue;
+    padding: 2em;
+    margin: 2em;
+    border: 5em;
+    border-radius: 5em; ;
+}
+
+.food_ingested_today{
+
+   flex-grow: 4;
+   align-items: stretch;
+   padding: 2em;
+   margin-bottom: 2;
+   text-align: center;
+   
+}
+
+.food_ingested_today_list{
+
+    background-image: linear-gradient(to left, rgb(0, 195, 255) , rgb(222, 246, 253));
+    flex-grow: 4;
+    align-items: stretch;
+    padding: 1.85em;
+    border-radius: 3em;
+    padding: 3em;
+    margin-bottom: 1em;
+}
+
+.food_ingested_today_header{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+   
+   
+}
+
+.add_new_food{
+    text-align: right;
+    padding: 1em;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Food_Tracker</title>
+        <meta name="This is an app to track Keto levels and food intakes to provided insights on the effectiveness of the keto diet." content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <logo class="logo">
+            <h1>Food Tracker</h1>
+        </logo>
+        <header class="header"> 
+            <form class="top_nav">
+                <select class="top_nav_button">
+                    <option class="top_nav" href=""> Food Intake</option>
+                    <option class="top_nav" href=""> Dashboard</option>
+                    <option class="top_nav" href=""> GKI Readings</option>
+                    <option class="top_nav" href=""> Exercise</option>
+                    <option class="top_nav" href=""> Account</option>
+                    <option class="top_nav" href=""> Account</option>
+                    <option class="top_nav" href=""> Help</option>
+                </select>
+            </form>
+         
+            <h1 id="nav_header" class="nav_header"> ${USER_NAME} Food Intake</h1>
+
+        </header>
+
+        <main class="main">
+            <article class="article">
+                <h1 class="input_food_header">Log Meal</h1>
+                <section class="food_input"></section>
+                    
+                    <form class="input_form"> 
+            
+                
+                        <label for="food_name">Food:</label>
+                        <select name="food_ingested" id="food_ingested">
+                            <option class="food_option" value="eggs">Eggs</option>
+                            <option class="food_option" value="coconut_oil">Coconut Oil</option>
+                            <option value="coffee">Coffee</option>
+                            <option value="add_new_food">Add New Food</option>
+                        </select><br>
+                    
+                        <label for="quanity_ingested">Quanity:</label>
+                        <input type="number" id="quanity_ingested" name="quanity_ingested" value="0"><br>
+                        <label for="time_ingested">Time of Meal:</label>
+                        <input type="time" id="time_ingested" name="time_ingested"><br>
+                        <label for="date_ingested">Date of Meal:</label>
+                        <input type="date" id="date_ingested" name="date_ingested"><br>
+                        <input class="food_submit_button"type="submit" value="Submit">
+                    </form>
+                <h1 class="food_intake_header"> Todays Food Intake </h1>
+                <h1 class="food_intake_header" id="date"> ${DATE} </h1>
+                <section class="food_tracker"> 
+                    <div id="total_calories_daily" class="totals_per_day">0</div>
+                    <div class="food_tracker_labels" label="total_calories_daily"> Total Calories</div>
+                    <div id="total_fats_daily" class="totals_per_day">0</div> 
+                    <div class="food_tracker_labels" label="total_fat_daily"> Fats </div> 
+                    <div id="total_protein_daily" class="totals_per_day">0</div> 
+                    <div class="food_tracker_labels" label ="total_protein_daily"> Protein </div>
+                    <div id="total_carbs_daily" class="totals_per_day">0</div> 
+                    <div class="food_tracker_labels" label ="total_carbs_daily"> Carbs </div> 
+                   
+            
+                </section>
+                 
+                <section></section>
+            </article>
+        
+            <aside class="food_ingested_today">
+                <h1 class="food_ingested_today_header">Todays Food Intake</h1>
+                <div class="food_ingested_today_list">Food Today 1</div>
+                <div class="food_ingested_today_list">Food Today 2</div>
+                <div class="food_ingested_today_list">Food Today 3</div>
+                <div class="food_ingested_today_list">Food Today 4</div>
+                <div class="food_ingested_today_list">Food Today 5</div>
+           
+           
+            </aside>
+            
+           <aside class="add_new_food">
+                <label for="new_food_barcode">Barcode:</label>
+                <input type="text" id="new_food_barcode" name="quanity_ingested" value="0"><br>
+                <label for="new_food_name">Food:</label>
+                <input type="text" id="new_food_name" name="new_food_name"><br>
+                <label for="new_food_calories">Calories</label>
+                <input type="number" id="new_food_calories" name="new_food_calories"><br> 
+                <label for="new_food_fat">Fat</label>
+                <input type="number" id="new_food_fat" name="new_food_fat"><br>
+                <label for="new_food_protein">Protein</label>
+                <input type="number" id="new_food_protein" name="new_food_protein"><br>
+                <label for="new_food_carbs">Carbs</label>
+                <input type="number" id="new_food_carbs" name="new_food_carbs"><br>
+                <input id="add_new_food_button" class="new_food_submit_button"type="submit" value="Add New Food">
+           
+           
+            </aside> 
+            
+           <div class="gki_reading">Last GKI Reading: ${LAST_GKI_READING}</div>
+        </main>
+        <footer class="footer">
+            <h5 class="copyright">Keto Tracker Copyright 2021 Samuel Carbine</h5>
+        <nav class="bottom_left_nav"></nav>
+        <nav class="bottom_right_nav"></nav>
+        </footer>
+        
+        
+        
+        <script src="scripts/scripts.js" async defer></script>
+    </body>
+</html>
