@@ -13,6 +13,7 @@ const calories_div = document.getElementById('new_food_calories');
 const fat_div =  document.getElementById('new_food_fat');
 const protein_div = document.getElementById('new_food_protein');
 const carbs_div = document.getElementById('new_food_carbs');
+<<<<<<< HEAD
 
 const foodIngested_div = document.getElementById('food_ingested');
 const quanityIngested_div = document.getElementById('quanity_ingested');
@@ -28,6 +29,24 @@ const last_gki_time_div= document.getElementById('gki_reading_time')
 
 const currentMeal = {barcode:"",foodName:"",foodQuanity:0,timeConsumed:"",dateConsumed:"",}
 
+=======
+   
+
+// const total_calories_daily_div = document.getElementById("total_calories_daily")
+// const total_carbs_daily_div = document.getElementById("total_carbs_daily")
+// const total_fats_daily_div = document.getElementById("total_fats_daily")
+// const total_calories_daily_div = document.getElementById("total_protein_daily")
+
+
+const foodConsumed = [];
+const currentMeal = {
+    barcode:"",
+    foodName:"",
+    foodQuanity:0,
+    timeConsumed:"",
+    dateConsumed:"",
+}
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 let totalDailyCalories=0;
 let totalDailyFat=0;
 let totalDailyProtien=0;
@@ -49,12 +68,36 @@ let foodLog = [
 let foodList = [];
 
 // this section holds user data
+<<<<<<< HEAD
 let currentActiveUser= ''
 let currentActiveUserId= ''
 let user = [
     { id: '00001',name: "Sam"},
     {id: '00002',name: "Holden"},
     {id: '00003',name: "Bella"}
+=======
+let currentActiveUser= 00000
+let currentUser = [
+    
+    { 
+        id: '00001',
+        name: "Sam"
+    },
+
+
+    {
+        id: '00002',  
+        name: "Holden"
+        
+    },
+
+
+    {
+        id: '00003',  
+        name: "Bella"
+    }
+
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 ]
 
 //get current date
@@ -65,17 +108,28 @@ let currentDate= () =>{
     let d = n.getDate();
     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
     console.log( m + "/" + d + "/" + y)
+<<<<<<< HEAD
+=======
+
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 }
 currentDate();
 
 //get currentUSer at login - currenlty just assiging an id to the function call staticly so variables can be tested in the DOM
 
 let getCurrentUser = (login) => {
+<<<<<<< HEAD
     for (let i = 0; i < user.length; i++){
         
         if (user[i].id === login){
             currentActiveUser = user[i].name;
             currentActiveUserId = user[i].id;
+=======
+    for (let i = 0; i < currentUser.length; i++){
+        
+        if (currentUser[i].id === login){
+            currentActiveUser = currentUser[i].name;
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
             console.log(currentActiveUser)
             document.getElementById("nav_header").innerHTML = `${currentActiveUser}'s Food Intake`;
             return
@@ -91,7 +145,11 @@ getCurrentUser('00001');
 
 // this function adds a new food to the foodList array once the user has hit the submit button
 const addNEwFood = () => {
+<<<<<<< HEAD
    const food = {
+=======
+   let food = {
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
         barcode: barcode_div.value,
         foodName: foodName_div.value,
         calories: calories_div.value,
@@ -102,6 +160,7 @@ const addNEwFood = () => {
    console.log(food)    
    foodList.push(food)
    console.log(foodList)
+<<<<<<< HEAD
 //    localStorage.setItem('Food List', JSON.stringify(foodList));
 }
 
@@ -178,3 +237,10 @@ document.getElementById('add_new_gki_button').addEventListener('click',getLatest
 //Store Data exturnally for later use  - GKI
 
 
+=======
+
+   localStorage.setItem('Food List', JSON.stringify(foodList));
+}
+
+document.getElementById('add_new_food_button').addEventListener('click', addNEwFood)
+>>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
