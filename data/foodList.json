@@ -1,0 +1,61 @@
+{
+  "post": [
+    {
+      "id": 1
+    },
+    {
+      "barcode": "850000843011",
+      "foodName": "Super Fat Macadamia MCT + Probiotics",
+      "calories": "300",
+      "fat": "31",
+      "protein": "3",
+      "carbs": "3",
+      "id": 2
+    },
+    {
+      "barcode": "073731001189",
+      "foodName": "Mission Carb Balance Tortilla Wraps",
+      "calories": "110",
+      "fat": "6",
+      "protein": "9",
+      "carbs": "5",
+      "id": 3
+    },
+    {
+      "barcode": "692752200052",
+      "foodName": "Coconut Oil",
+      "calories": "120",
+      "fat": "14",
+      "protein": "0",
+      "carbs": "0",
+      "id": 4
+    },
+    {
+      "barcode": "697658691041",
+      "foodName": "Hemp Yeah Protein Powder",
+      "calories": "110",
+      "fat": "3",
+      "protein": "15",
+      "carbs": "1",
+      "id": 5
+    },
+    {
+      "barcode": "858847000871",
+      "foodName": "Navitas Organic Cacao Power",
+      "calories": "60",
+      "fat": "1.5",
+      "protein": "4",
+      "carbs": "3",
+      "id": 6
+    },
+    {
+      "barcode": "894697002788",
+      "foodName": "NuttZo Keto Butter",
+      "calories": "190",
+      "fat": "18",
+      "protein": "4",
+      "carbs": "2",
+      "id": 7
+    }
+  ]
+}

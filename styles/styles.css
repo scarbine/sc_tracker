@@ -34,10 +34,7 @@ header{
     border: 5em;
     border-color: antiquewhite;
     border-radius: 5em; 
-<<<<<<< HEAD
     box-shadow: .5em .75em lightgrey;
-=======
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 
 }
 
@@ -92,11 +89,7 @@ article {
     
 } 
 
-<<<<<<< HEAD
 /* .gki_reading{
-=======
-.gki_reading{
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 
    margin: 1em;
    padding: 1em;
@@ -106,19 +99,11 @@ article {
    text-align: center;
    flex-grow: 1em;
 
-<<<<<<< HEAD
 } */
 
 main{
 
     /* background-image: linear-gradient(to right, rgb(0, 195, 255) , rgb(222, 246, 253)); */
-=======
-}
-
-main{
-
-    background-image: linear-gradient(to right, rgb(0, 195, 255) , rgb(222, 246, 253));
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -127,7 +112,6 @@ main{
 
 }
 
-<<<<<<< HEAD
 .log_meal , .gki_reading , .new_food, .top_nav_button{
 
     box-shadow: 2px 5px lightgrey;
@@ -142,9 +126,6 @@ main{
 }
 
 .food_tracker, .last_gki_reading{
-=======
-.food_tracker{
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 
     padding: .5em;
     margin: .5em;
@@ -234,10 +215,7 @@ footer{
     border-radius: 3em;
     padding: 3em;
     margin-bottom: 1em;
-<<<<<<< HEAD
     box-shadow: 2px 5px lightgrey;
-=======
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 }
 
 .food_ingested_today_header{
@@ -245,16 +223,12 @@ footer{
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
-<<<<<<< HEAD
   
 
-=======
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
    
    
 }
 
-<<<<<<< HEAD
 /* .new_food {
     box-shadow: 2px 5px lightgrey;
     margin: 1em;
@@ -287,11 +261,6 @@ footer{
 .gki_input{
     display: flex;
    flex-direction: column;
-=======
-.add_new_food{
-    text-align: right;
-    padding: 1em;
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 }
 
 .copyright{

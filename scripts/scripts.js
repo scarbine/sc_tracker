@@ -13,7 +13,6 @@ const calories_div = document.getElementById('new_food_calories');
 const fat_div =  document.getElementById('new_food_fat');
 const protein_div = document.getElementById('new_food_protein');
 const carbs_div = document.getElementById('new_food_carbs');
-<<<<<<< HEAD
 
 const foodIngested_div = document.getElementById('food_ingested');
 const quanityIngested_div = document.getElementById('quanity_ingested');
@@ -29,24 +28,6 @@ const last_gki_time_div= document.getElementById('gki_reading_time')
 
 const currentMeal = {barcode:"",foodName:"",foodQuanity:0,timeConsumed:"",dateConsumed:"",}
 
-=======
-   
-
-// const total_calories_daily_div = document.getElementById("total_calories_daily")
-// const total_carbs_daily_div = document.getElementById("total_carbs_daily")
-// const total_fats_daily_div = document.getElementById("total_fats_daily")
-// const total_calories_daily_div = document.getElementById("total_protein_daily")
-
-
-const foodConsumed = [];
-const currentMeal = {
-    barcode:"",
-    foodName:"",
-    foodQuanity:0,
-    timeConsumed:"",
-    dateConsumed:"",
-}
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 let totalDailyCalories=0;
 let totalDailyFat=0;
 let totalDailyProtien=0;
@@ -68,36 +49,12 @@ let foodLog = [
 let foodList = [];
 
 // this section holds user data
-<<<<<<< HEAD
 let currentActiveUser= ''
 let currentActiveUserId= ''
 let user = [
     { id: '00001',name: "Sam"},
     {id: '00002',name: "Holden"},
     {id: '00003',name: "Bella"}
-=======
-let currentActiveUser= 00000
-let currentUser = [
-    
-    { 
-        id: '00001',
-        name: "Sam"
-    },
-
-
-    {
-        id: '00002',  
-        name: "Holden"
-        
-    },
-
-
-    {
-        id: '00003',  
-        name: "Bella"
-    }
-
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 ]
 
 //get current date
@@ -108,28 +65,18 @@ let currentDate= () =>{
     let d = n.getDate();
     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
     console.log( m + "/" + d + "/" + y)
-<<<<<<< HEAD
-=======
-
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
 }
 currentDate();
 
 //get currentUSer at login - currenlty just assiging an id to the function call staticly so variables can be tested in the DOM
 
 let getCurrentUser = (login) => {
-<<<<<<< HEAD
+
     for (let i = 0; i < user.length; i++){
         
         if (user[i].id === login){
             currentActiveUser = user[i].name;
             currentActiveUserId = user[i].id;
-=======
-    for (let i = 0; i < currentUser.length; i++){
-        
-        if (currentUser[i].id === login){
-            currentActiveUser = currentUser[i].name;
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
             console.log(currentActiveUser)
             document.getElementById("nav_header").innerHTML = `${currentActiveUser}'s Food Intake`;
             return
@@ -144,23 +91,46 @@ let getCurrentUser = (login) => {
 getCurrentUser('00001');
 
 // this function adds a new food to the foodList array once the user has hit the submit button
+const food ={};
+
 const addNEwFood = () => {
-<<<<<<< HEAD
    const food = {
-=======
-   let food = {
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
         barcode: barcode_div.value,
         foodName: foodName_div.value,
         calories: calories_div.value,
         fat: fat_div.value,
         protein: protein_div.value,
         carbs: carbs_div.value,
+        userId: currentActiveUserId,
+        userName: currentActiveUser
    }
    console.log(food)    
    foodList.push(food)
    console.log(foodList)
-<<<<<<< HEAD
+
+  
+
+   const createNewFood =async () => {
+    // e.preventDefault();
+
+   await fetch('http://localhost:3000/post', {
+        method: 'POST',
+        body: JSON.stringify(food),
+        headers: {'Content-Type': 'application/json'}
+        })
+
+}
+    createNewFood();
+
+//  Clear fields once form has been submited
+
+        barcode_div.value='';
+        foodName_div.value='';
+        calories_div.value='';
+        fat_div.value='';
+        protein_div.value='';
+        carbs_div.value='';
+        
 //    localStorage.setItem('Food List', JSON.stringify(foodList));
 }
 
@@ -200,12 +170,19 @@ const logMeal = () => {
     console.log(newMeal);
     mealLog.push(newMeal);
     console.log(mealLog);
+
+    foodIngested_div.value=''
+    quanityIngested_div.value=''
+    timeIngested_div.value=''
+    dateIngested_div.value=''
    
 }
 }
 
 const test = ()=>{
 console.log(foodIngested_div.value);
+
+        
 }
 document.getElementById('meal_log_submit').addEventListener('click',logMeal);
 
@@ -213,7 +190,7 @@ document.getElementById('meal_log_submit').addEventListener('click',logMeal);
 //get latest GKI reading and send current values to GKI Readings Array
 
 const gkiReadings =[ ];
-const latestGkiReading = '';
+const latestGkiReading = {};
 
 const getLatestGki = () => {
     let latestGkiReading = {
@@ -227,20 +204,40 @@ const getLatestGki = () => {
     console.log(latestGkiReading);
     gkiReadings.push(latestGkiReading);
     console.log(gkiReadings);
+
+    last_gki_reading_div.value='';
+    last_gki_date_div.value='';
+    last_gki_time_div.value='';
+
+
 }
 document.getElementById('add_new_gki_button').addEventListener('click',getLatestGki);
 
 
 
-//Store Data exturnally for later use  - Log Meals
-//Store Data exturnally for later use  - New Food
-//Store Data exturnally for later use  - GKI
+//Store Data externally for later use  - Log Meals
+//Store Data externally for later use  - New Food
+//Store Data externally for later use  - GKI
 
 
-=======
+// const renderPost = async () => {
+//     let uri = 'http://localhost:3000/post';
+//     const res = await fetch(uri);
+//     const posts = await res.json();
+//     console.log(posts);
+// }
+// window.addEventListener('DOMContentLoaded', renderPost());
 
-   localStorage.setItem('Food List', JSON.stringify(foodList));
-}
 
-document.getElementById('add_new_food_button').addEventListener('click', addNEwFood)
->>>>>>> d5ad286acdcd3a8eb0613eade40af979bc588039
+// const form = document.querySelector('form');
+
+// const createNewFood =async (e) => {
+//     e.preventDefault();
+
+//     await fetch('http://localhost:3000/post', {
+//         method: 'POST',
+//         body: JSON.stringify(food)
+//         })
+
+// }
+// form.addEventListener('click', createNewFood);
